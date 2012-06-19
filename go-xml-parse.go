@@ -85,11 +85,9 @@ func main() {
 			break
 		}
 		// Inspect the type of the token just read.
-		switch t.(type) {
+		switch se := t.(type) {
 		case xml.StartElement:
 			// If we just read a StartElement token
-			var se xml.StartElement
-			se = t.(xml.StartElement)
 			inElement = se.Name.Local
 			// ...and its name is "page"
 			if inElement == "page" {
