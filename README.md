@@ -33,7 +33,7 @@ Here's a little snippet of an example wikipedia page in the doc:
 </page>
 ```
 
-In our Go code, we define a struct to match the <page> element, its nested <redirect> element and grab a couple of fields we're interested in (<text> and <title>).
+In our Go code, we define a struct to match the <page> element, its nested <redirect> element and grab a couple of fields we're interested in (`<text>` and `<title>`).
 ```go
 type Redirect struct { 
     Title string `xml:"title,attr"` 
